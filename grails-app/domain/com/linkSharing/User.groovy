@@ -2,9 +2,18 @@ package com.linkSharing
 
 class User {
 
-    String name
-    Integer age
+    String email
+    String username
+    String firstname
+    String lastname
+    boolean admin
+    boolean active
+    Date dateCreated
+    Date lastUpdated
+
+    static hasMany = [topics: Topic,readingItems:ReadingItem,resourceRatings:ResourceRating,subscription:Subscription]
 
     static constraints = {
+        email email: true, blank: false , unique: true
     }
 }

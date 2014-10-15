@@ -23,20 +23,118 @@
 			</g:if>
 			<ol class="property-list user">
 			
-				<g:if test="${userInstance?.age}">
+				<g:if test="${userInstance?.email}">
 				<li class="fieldcontain">
-					<span id="age-label" class="property-label"><g:message code="user.age.label" default="Age" /></span>
+					<span id="email-label" class="property-label"><g:message code="user.email.label" default="Email" /></span>
 					
-						<span class="property-value" aria-labelledby="age-label"><g:fieldValue bean="${userInstance}" field="age"/></span>
+						<span class="property-value" aria-labelledby="email-label"><g:fieldValue bean="${userInstance}" field="email"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${userInstance?.name}">
+				<g:if test="${userInstance?.active}">
 				<li class="fieldcontain">
-					<span id="name-label" class="property-label"><g:message code="user.name.label" default="Name" /></span>
+					<span id="active-label" class="property-label"><g:message code="user.active.label" default="Active" /></span>
 					
-						<span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${userInstance}" field="name"/></span>
+						<span class="property-value" aria-labelledby="active-label"><g:formatBoolean boolean="${userInstance?.active}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${userInstance?.admin}">
+				<li class="fieldcontain">
+					<span id="admin-label" class="property-label"><g:message code="user.admin.label" default="Admin" /></span>
+					
+						<span class="property-value" aria-labelledby="admin-label"><g:formatBoolean boolean="${userInstance?.admin}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${userInstance?.dateCreated}">
+				<li class="fieldcontain">
+					<span id="dateCreated-label" class="property-label"><g:message code="user.dateCreated.label" default="Date Created" /></span>
+					
+						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${userInstance?.dateCreated}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${userInstance?.firstname}">
+				<li class="fieldcontain">
+					<span id="firstname-label" class="property-label"><g:message code="user.firstname.label" default="Firstname" /></span>
+					
+						<span class="property-value" aria-labelledby="firstname-label"><g:fieldValue bean="${userInstance}" field="firstname"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${userInstance?.lastUpdated}">
+				<li class="fieldcontain">
+					<span id="lastUpdated-label" class="property-label"><g:message code="user.lastUpdated.label" default="Last Updated" /></span>
+					
+						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${userInstance?.lastUpdated}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${userInstance?.lastname}">
+				<li class="fieldcontain">
+					<span id="lastname-label" class="property-label"><g:message code="user.lastname.label" default="Lastname" /></span>
+					
+						<span class="property-value" aria-labelledby="lastname-label"><g:fieldValue bean="${userInstance}" field="lastname"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${userInstance?.readingItems}">
+				<li class="fieldcontain">
+					<span id="readingItems-label" class="property-label"><g:message code="user.readingItems.label" default="Reading Items" /></span>
+					
+						<g:each in="${userInstance.readingItems}" var="r">
+						<span class="property-value" aria-labelledby="readingItems-label"><g:link controller="readingItem" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${userInstance?.resourceRatings}">
+				<li class="fieldcontain">
+					<span id="resourceRatings-label" class="property-label"><g:message code="user.resourceRatings.label" default="Resource Ratings" /></span>
+					
+						<g:each in="${userInstance.resourceRatings}" var="r">
+						<span class="property-value" aria-labelledby="resourceRatings-label"><g:link controller="resourceRating" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${userInstance?.subscription}">
+				<li class="fieldcontain">
+					<span id="subscription-label" class="property-label"><g:message code="user.subscription.label" default="Subscription" /></span>
+					
+						<g:each in="${userInstance.subscription}" var="s">
+						<span class="property-value" aria-labelledby="subscription-label"><g:link controller="subscription" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${userInstance?.topics}">
+				<li class="fieldcontain">
+					<span id="topics-label" class="property-label"><g:message code="user.topics.label" default="Topics" /></span>
+					
+						<g:each in="${userInstance.topics}" var="t">
+						<span class="property-value" aria-labelledby="topics-label"><g:link controller="topic" action="show" id="${t.id}">${t?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${userInstance?.username}">
+				<li class="fieldcontain">
+					<span id="username-label" class="property-label"><g:message code="user.username.label" default="Username" /></span>
+					
+						<span class="property-value" aria-labelledby="username-label"><g:fieldValue bean="${userInstance}" field="username"/></span>
 					
 				</li>
 				</g:if>

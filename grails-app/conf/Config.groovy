@@ -99,9 +99,11 @@ environments {
 log4j.main = {
     // Example of changing the log pattern for the default console appender:
     //
-    //appenders {
-    //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
-    //}
+    appenders {
+        rollingFile name: "myAppender",
+                maxFileSize: 1024,
+                file: "/home/intelligrape/newDir/myApp.log"
+    }
 
     error  'org.codehaus.groovy.grails.web.servlet',        // controllers
            'org.codehaus.groovy.grails.web.pages',          // GSP
@@ -114,4 +116,14 @@ log4j.main = {
            'org.springframework',
            'org.hibernate',
            'net.sf.ehcache.hibernate'
+
+    info 'com.linkSharing'
+
+    root {
+        info 'stdout', 'myAppender',
+                additivity = true
+    }
+
+
+
 }
