@@ -32,6 +32,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${linkResourceInstance?.url}">
+				<li class="fieldcontain">
+					<span id="url-label" class="property-label"><g:message code="linkResource.url.label" default="Url" /></span>
+					
+						<span class="property-value" aria-labelledby="url-label"><g:fieldValue bean="${linkResourceInstance}" field="url"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${linkResourceInstance?.createdBy}">
 				<li class="fieldcontain">
 					<span id="createdBy-label" class="property-label"><g:message code="linkResource.createdBy.label" default="Created By" /></span>
@@ -86,15 +95,6 @@
 					<span id="topic-label" class="property-label"><g:message code="linkResource.topic.label" default="Topic" /></span>
 					
 						<span class="property-value" aria-labelledby="topic-label"><g:link controller="topic" action="show" id="${linkResourceInstance?.topic?.id}">${linkResourceInstance?.topic?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${linkResourceInstance?.url}">
-				<li class="fieldcontain">
-					<span id="url-label" class="property-label"><g:message code="linkResource.url.label" default="Url" /></span>
-					
-						<span class="property-value" aria-labelledby="url-label"><g:fieldValue bean="${linkResourceInstance}" field="url"/></span>
 					
 				</li>
 				</g:if>

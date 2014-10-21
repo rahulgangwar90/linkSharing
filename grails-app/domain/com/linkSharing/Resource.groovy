@@ -1,9 +1,9 @@
 package com.linkSharing
 
-class Resource {
+ class Resource {
 
     Topic topic
-    User createdBy
+    User user
     String description
     Date dateCreated
     Date lastUpdated
@@ -11,6 +11,11 @@ class Resource {
     static belongsTo = [topic : Topic]
 
     static hasMany = [resourceRatings:ResourceRating,readingItems:ReadingItem]
+
+    static mapping = {
+        tablePerHierarchy true
+//        sort dateCreated:"desc"
+    }
 
     static constraints = {
         description size: 0..1024

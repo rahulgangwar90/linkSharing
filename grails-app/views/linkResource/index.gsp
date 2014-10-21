@@ -26,6 +26,8 @@
 					
 						<g:sortableColumn property="description" title="${message(code: 'linkResource.description.label', default: 'Description')}" />
 					
+						<g:sortableColumn property="url" title="${message(code: 'linkResource.url.label', default: 'Url')}" />
+					
 						<th><g:message code="linkResource.createdBy.label" default="Created By" /></th>
 					
 						<g:sortableColumn property="dateCreated" title="${message(code: 'linkResource.dateCreated.label', default: 'Date Created')}" />
@@ -33,8 +35,6 @@
 						<g:sortableColumn property="lastUpdated" title="${message(code: 'linkResource.lastUpdated.label', default: 'Last Updated')}" />
 					
 						<th><g:message code="linkResource.topic.label" default="Topic" /></th>
-					
-						<g:sortableColumn property="url" title="${message(code: 'linkResource.url.label', default: 'Url')}" />
 					
 					</tr>
 				</thead>
@@ -44,6 +44,8 @@
 					
 						<td><g:link action="show" id="${linkResourceInstance.id}">${fieldValue(bean: linkResourceInstance, field: "description")}</g:link></td>
 					
+						<td>${fieldValue(bean: linkResourceInstance, field: "url")}</td>
+					
 						<td>${fieldValue(bean: linkResourceInstance, field: "createdBy")}</td>
 					
 						<td><g:formatDate date="${linkResourceInstance.dateCreated}" /></td>
@@ -51,8 +53,6 @@
 						<td><g:formatDate date="${linkResourceInstance.lastUpdated}" /></td>
 					
 						<td>${fieldValue(bean: linkResourceInstance, field: "topic")}</td>
-					
-						<td>${fieldValue(bean: linkResourceInstance, field: "url")}</td>
 					
 					</tr>
 				</g:each>

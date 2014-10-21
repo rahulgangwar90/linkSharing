@@ -24,8 +24,6 @@
 			<thead>
 					<tr>
 					
-						<th><g:message code="topic.createdBy.label" default="Created By" /></th>
-					
 						<g:sortableColumn property="dateCreated" title="${message(code: 'topic.dateCreated.label', default: 'Date Created')}" />
 					
 						<g:sortableColumn property="lastUpdated" title="${message(code: 'topic.lastUpdated.label', default: 'Last Updated')}" />
@@ -42,9 +40,7 @@
 				<g:each in="${topicInstanceList}" status="i" var="topicInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${topicInstance.id}">${fieldValue(bean: topicInstance, field: "createdBy")}</g:link></td>
-					
-						<td><g:formatDate date="${topicInstance.dateCreated}" /></td>
+						<td><g:link action="show" id="${topicInstance.id}">${fieldValue(bean: topicInstance, field: "dateCreated")}</g:link></td>
 					
 						<td><g:formatDate date="${topicInstance.lastUpdated}" /></td>
 					

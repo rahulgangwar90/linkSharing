@@ -3,7 +3,7 @@ package com.linkSharing
 class Topic {
 
     String name
-    User createdBy
+    User user
     Date dateCreated
     Date lastUpdated
 

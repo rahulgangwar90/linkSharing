@@ -1,0 +1,8 @@
+div#box{
+
+    border: 2px solid;
+    border-radius: 10px;
+    width: 30%;
+    transform:translate(100%,50%);
+    border-color: #ff0000 ;
+}

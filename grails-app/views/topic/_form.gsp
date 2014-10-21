@@ -2,15 +2,6 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: topicInstance, field: 'createdBy', 'error')} required">
-	<label for="createdBy">
-		<g:message code="topic.createdBy.label" default="Created By" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="createdBy" name="createdBy.id" from="${com.linkSharing.User.list()}" optionKey="id" required="" value="${topicInstance?.createdBy?.id}" class="many-to-one"/>
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: topicInstance, field: 'name', 'error')} required">
 	<label for="name">
 		<g:message code="topic.name.label" default="Name" />

@@ -11,21 +11,21 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: documentResourceInstance, field: 'createdBy', 'error')} required">
-	<label for="createdBy">
-		<g:message code="documentResource.createdBy.label" default="Created By" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="createdBy" name="createdBy.id" from="${com.linkSharing.User.list()}" optionKey="id" required="" value="${documentResourceInstance?.createdBy?.id}" class="many-to-one"/>
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: documentResourceInstance, field: 'filePath', 'error')} required">
 	<label for="filePath">
 		<g:message code="documentResource.filePath.label" default="File Path" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="filePath" required="" value="${documentResourceInstance?.filePath}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: documentResourceInstance, field: 'createdBy', 'error')} required">
+	<label for="createdBy">
+		<g:message code="documentResource.createdBy.label" default="Created By" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="createdBy" name="createdBy.id" from="${com.linkSharing.User.list()}" optionKey="id" required="" value="${documentResourceInstance?.createdBy?.id}" class="many-to-one"/>
 
 </div>
 

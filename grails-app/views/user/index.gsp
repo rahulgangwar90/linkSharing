@@ -26,6 +26,8 @@
 					
 						<g:sortableColumn property="email" title="${message(code: 'user.email.label', default: 'Email')}" />
 					
+						<g:sortableColumn property="username" title="${message(code: 'user.username.label', default: 'Username')}" />
+					
 						<g:sortableColumn property="active" title="${message(code: 'user.active.label', default: 'Active')}" />
 					
 						<g:sortableColumn property="admin" title="${message(code: 'user.admin.label', default: 'Admin')}" />
@@ -33,8 +35,6 @@
 						<g:sortableColumn property="dateCreated" title="${message(code: 'user.dateCreated.label', default: 'Date Created')}" />
 					
 						<g:sortableColumn property="firstname" title="${message(code: 'user.firstname.label', default: 'Firstname')}" />
-					
-						<g:sortableColumn property="lastUpdated" title="${message(code: 'user.lastUpdated.label', default: 'Last Updated')}" />
 					
 					</tr>
 				</thead>
@@ -44,6 +44,8 @@
 					
 						<td><g:link action="show" id="${userInstance.id}">${fieldValue(bean: userInstance, field: "email")}</g:link></td>
 					
+						<td>${fieldValue(bean: userInstance, field: "username")}</td>
+					
 						<td><g:formatBoolean boolean="${userInstance.active}" /></td>
 					
 						<td><g:formatBoolean boolean="${userInstance.admin}" /></td>
@@ -51,8 +53,6 @@
 						<td><g:formatDate date="${userInstance.dateCreated}" /></td>
 					
 						<td>${fieldValue(bean: userInstance, field: "firstname")}</td>
-					
-						<td><g:formatDate date="${userInstance.lastUpdated}" /></td>
 					
 					</tr>
 				</g:each>

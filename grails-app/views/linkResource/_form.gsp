@@ -11,6 +11,15 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: linkResourceInstance, field: 'url', 'error')} required">
+	<label for="url">
+		<g:message code="linkResource.url.label" default="Url" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field type="url" name="url" required="" value="${linkResourceInstance?.url}"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: linkResourceInstance, field: 'createdBy', 'error')} required">
 	<label for="createdBy">
 		<g:message code="linkResource.createdBy.label" default="Created By" />
@@ -62,15 +71,6 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select id="topic" name="topic.id" from="${com.linkSharing.Topic.list()}" optionKey="id" required="" value="${linkResourceInstance?.topic?.id}" class="many-to-one"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: linkResourceInstance, field: 'url', 'error')} required">
-	<label for="url">
-		<g:message code="linkResource.url.label" default="Url" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="url" required="" value="${linkResourceInstance?.url}"/>
 
 </div>
 

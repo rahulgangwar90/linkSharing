@@ -23,15 +23,6 @@
 			</g:if>
 			<ol class="property-list topic">
 			
-				<g:if test="${topicInstance?.createdBy}">
-				<li class="fieldcontain">
-					<span id="createdBy-label" class="property-label"><g:message code="topic.createdBy.label" default="Created By" /></span>
-					
-						<span class="property-value" aria-labelledby="createdBy-label"><g:link controller="user" action="show" id="${topicInstance?.createdBy?.id}">${topicInstance?.createdBy?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${topicInstance?.dateCreated}">
 				<li class="fieldcontain">
 					<span id="dateCreated-label" class="property-label"><g:message code="topic.dateCreated.label" default="Date Created" /></span>

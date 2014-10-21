@@ -32,6 +32,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${documentResourceInstance?.filePath}">
+				<li class="fieldcontain">
+					<span id="filePath-label" class="property-label"><g:message code="documentResource.filePath.label" default="File Path" /></span>
+					
+						<span class="property-value" aria-labelledby="filePath-label"><g:fieldValue bean="${documentResourceInstance}" field="filePath"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${documentResourceInstance?.createdBy}">
 				<li class="fieldcontain">
 					<span id="createdBy-label" class="property-label"><g:message code="documentResource.createdBy.label" default="Created By" /></span>
@@ -46,15 +55,6 @@
 					<span id="dateCreated-label" class="property-label"><g:message code="documentResource.dateCreated.label" default="Date Created" /></span>
 					
 						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${documentResourceInstance?.dateCreated}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${documentResourceInstance?.filePath}">
-				<li class="fieldcontain">
-					<span id="filePath-label" class="property-label"><g:message code="documentResource.filePath.label" default="File Path" /></span>
-					
-						<span class="property-value" aria-labelledby="filePath-label"><g:fieldValue bean="${documentResourceInstance}" field="filePath"/></span>
 					
 				</li>
 				</g:if>
