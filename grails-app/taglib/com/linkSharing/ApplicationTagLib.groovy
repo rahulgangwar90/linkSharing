@@ -31,10 +31,15 @@ class ApplicationTagLib {
 
         resources.each{
 
-            out << it.user.username +"..................."+ it.topic.name+"<br>"
-            out << "______________________________________________<br>"
-            out << it.description + "<br>"
-            out << "______________________________________________<br>"
+            def username = it.user.username
+            def topicName = it.topic.name
+            def description = it.description
+            def fullName = it.user.firstname + " " + it.user.lastname
+
+
+            out << g.render(template: "/templates/recentShared" ,model: [fullName :fullName,username:username , topicName : topicName , description: description])
+
+
         }
 
     }
@@ -46,10 +51,14 @@ class ApplicationTagLib {
 
         resourcesRating.each{
 
-            out << it.user.username +"..................."+ it.resource.topic.name+"<br>"
-            out << "______________________________________________<br>"
-            out << it.resource.description + "<br>"
-            out << "______________________________________________<br>"
+            def username = it.user.username
+            def topicName = it.resource.topic.name
+            def description = it.resource.description
+            def fullName = it.user.firstname + " " + it.user.lastname
+
+
+            out << g.render(template: "/templates/topPosts" ,model: [fullName :fullName,username:username , topicName : topicName , description: description])
+
         }
 
     }
@@ -63,9 +72,9 @@ class ApplicationTagLib {
         def totalTopic = Topic.countByUser(user)
         def totalSubscription = Subscription.countByUser(user)
 
-        out << "<p>${name}</p>"
-        out << "<p>@${username}</p>"
-        out << "<p>Subscription : ${totalSubscription}   Topics : ${totalTopic}</p>"
+
+
+        out << g.render(template: "/templates/userInformation" , model: [name:name,username:username,totalSubscription:totalSubscription,totalTopic:totalTopic])
 
     }
 
@@ -78,18 +87,13 @@ class ApplicationTagLib {
         def readingList = ReadingItem.findAllByUser(user)
 
 
-        out << "<table border=\"1\">"
 
         readingList.each {
-            out << "<tr >"
-            out << "<td>"
-            out << "<p>${name}  @${username}  &nbsp;&nbsp; </p>"
-            out << "<p>${it.resource.description}</p>"
-            out << "</td>"
-            out << "</tr>"
+
+            out << g.render(template: "/templates/inbox", model: [name:name,username: username,description:it.resource.description])
 
         }
-        out << "</table>"
+
 
 
 

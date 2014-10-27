@@ -22,14 +22,27 @@
     <!-- demo CSS -->
     <style>
     .content{ height: 401px; }
-    #sidebar{ float: right ;}
+    #sidebar{ float: right ; }
     </style>
 
 </head>
 
 <body>
 <header>
-    <h1>Link sharing</h1>
+
+    <div>
+        <div style="float: left">
+            <h1>Link sharing</h1>
+        </div>
+
+        <div style="float: right ; margin-top: 25px">
+            <form method="get" action="/search" id="search" >
+                <input name="q" type="text" size="40" placeholder="Search..." />
+            </form>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+
 </header>
 
 <div id="demo" >
@@ -57,9 +70,10 @@
             </g:form>
         </div>
 
+
         <!-- content -->
-        <div  class="content light" >
-            <h2>Recent shared</h2>
+       <h2>Recent shared</h2>
+        <div  class="content " >
             <hr /><br>
             <ls:recentShares/>
             <hr />
@@ -70,8 +84,8 @@
 
 
         <!-- content -->
-        <div   class="content light">
-            <h2>Top Posts</h2>
+        <h2>Top Posts</h2>
+        <div   class="content ">
             <hr /><br>
             <ls:topPosts/>
             <hr />

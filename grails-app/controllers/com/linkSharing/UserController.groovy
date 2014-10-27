@@ -40,4 +40,6 @@ class UserController {
        redirect controller: "home" , action: "dashboard"
 
     }
+
+
 }

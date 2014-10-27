@@ -180,11 +180,11 @@ code{
     overflow: auto;
     position: relative;
     padding: 20px;
-    background: #ffffff;
+    background: #333;
     margin: 10px;
     width: 740px;
     max-width: 97%;
-    height: 400px;
+    height: 200px;
     -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
 }
 
@@ -198,6 +198,10 @@ code{
     max-width: 97%;
     height: 800px;
     -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
+
+.content#inbox{
+    width: 550px;
 }
 
 .content.hidden{ display: none; }
@@ -515,7 +519,7 @@ hr + .content:nth-child(odd) h2{
     font-style: italic;
 }
 
-.content.nested{ height: 600px; }
+.content.nested{ height: 500px; }
 
 .content.nested .nested{
     margin: 0 auto;
@@ -572,10 +576,7 @@ hr + .content:nth-child(odd) h2{
 
 .content table{
     width: 100%;
-    border-collapse: collapse;
-    border-top: 1px dashed #666;
-    border-left: 1px dashed #666;
-    border-right: 1px dashed #666;
+
     background: rgba(0,0,0,0.1);
 }
 
@@ -838,4 +839,39 @@ footer a{ margin-right: 20px; }
 
 @media only screen and (min-width: 1629px){
     .showcase .horizontal-images.content{ width: 700px; }
+}
+
+#search {
+
+}
+
+
+#search input[type="text"] {
+    background: url(http://www.bloggermint.com/demos/css3searchbox/search-white.png) no-repeat 10px 6px #444;
+    border: 0 none;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    color: #d7d7d7;
+    width:150px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+}
+
+#search input[type="text"]:focus {
+    background: url(http://www.bloggermint.com/demos/css3searchbox/search-dark.png) no-repeat 10px 6px #fcfcfc;
+    color: #6a6f75;
+    width: 200px;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
