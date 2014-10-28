@@ -1,16 +1,10 @@
-<div>
-    <br>
-    <div class="avatar" style="float: left; margin-top: 20px;">
-        <img src="http://dummyimage.com/100x100/000/fff.jpg" alt="Avatar" class="avatar" />
+<div class="media">
+    <a class="pull-left" href="#">
+        <img src="http://dummyimage.com/50x50/000/fff.jpg" alt="Avatar" class="avatar" />
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading">${fullName} <small>@${username}  </small>${topicName} </h4>
+        ${description}
     </div>
-    <div class="comment-content" style="float: right; margin-right: 10px; width: 75% ">
-
-        <p>${fullName} @${username}   ... ${topicName}</p>
-        <p>${description}</p>
-
-
-    </div>
-    <div class="clear-both"></div>
-
 </div>
-<hr/>
+<hr>

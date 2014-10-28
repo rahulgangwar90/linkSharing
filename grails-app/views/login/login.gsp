@@ -1,140 +1,160 @@
 <!DOCTYPE html>
-<!--[if IE 8 ]><html lang="en" class="ie8"><![endif]-->
-<!--[if IE 9 ]><html lang="en" class="ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="en">
-<!--<![endif]-->
+<html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Login</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- stylesheet for demo and examples -->
-    <asset:stylesheet href="myStyle.css"/>
-    <!--[if lt IE 9]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-	<![endif]-->
+    <title></title>
 
-    <!-- custom scrollbar stylesheet -->
-    <asset:stylesheet href="jquery.mCustomScrollbar.css"/>
+    <!-- Include bootstrap stylesheets -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
-    <!-- demo CSS -->
-    <style>
-    .content{ height: 401px; }
-    #sidebar{ float: right ; }
-    </style>
+    <!-- Optional: Include the jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
+    <!-- Optional: Incorporate the Bootstrap JavaScript plugins -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
-
 <body>
-<header>
 
-    <div>
-        <div style="float: left">
-            <h1>Link sharing</h1>
-        </div>
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
 
-        <div style="float: right ; margin-top: 25px">
-            <form method="get" action="/search" id="search" >
-                <input name="q" type="text" size="40" placeholder="Search..." />
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#"><b>LinkSharing</b></a>
+                </li>
+            </ul>
+
+            <form class="navbar-form navbar-right " role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>
+                    Submit
+                </button>
             </form>
+
+            %{--<ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">Link</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="#">Action</a>
+                        </li>
+                        <li>
+                            <a href="#">Another action</a>
+                        </li>
+                        <li>
+                            <a href="#">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">Separated link</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>--}%
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+
+    <div class="row">
+
+        <!-- left div-->
+        <div class="col-md-7 panel panel-default">
+            <div class="row ">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Recent Shares
+                    </div>
+                    <div class="panel-body">
+                        <ls:recentShares/>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Top posts
+                    </div>
+                    <div class="panel-body">
+                        <ls:topPosts/>
+                    </div>
+                </div>
+            </div>
+        </div><!-- left div-->
+
+    <!-- spacing div-->
+        <div class="col-md-1">
+
+        </div><!-- spacing div end-->
+
+    <!-- right div-->
+        <div class="col-md-4  offset7">
+            <div class="row panel panel-default">
+                <ul id="myTab" class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#login" data-toggle="tab"><b>Login</b></a>
+                    </li>
+                    <li>
+                        <a href="#signup" data-toggle="tab"><b>Sign Up</b></a>
+                    </li>
+                </ul>
+            </li>
+            </ul>
+
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade in active" id="login">
+                        <br>
+                        <g:form name="loginForm" controller="login" action="validateCredential" >
+
+                            <dl class="dl-horizontal">
+                                <dt>Username</dt>
+                                <dd><g:textField name="username"/></dd><br>
+                                <dt>Password</dt>
+                                <dd><g:textField name="password"/></dd><br>
+                                <dt></dt>
+                                <dd><g:submitButton name="submit" value="Login" class="btn btn-primary btn-sm"/></dd>
+                            </dl>
+                        </g:form>
+                    </div>
+                    <div class="tab-pane fade" id="signup">
+                        <g:uploadForm name="register" controller="user" action="createUser">
+
+                            <br><br>
+                            <dl class="dl-horizontal">
+                                <dt>first name</dt>
+                                <dd><g:textField name="firstName"/></dd><br>
+                                <dt>last name</dt>
+                                <dd><g:textField name="lastName"/></dd><br>
+                                <dt>email</dt>
+                                <dd><g:textField name="email"/></dd><br>
+                                <dt>username</dt>
+                                <dd><g:textField name="username"/></dd><br>
+                                <dt>password</dt>
+                                <dd><g:textField name="password"/></dd><br>
+                                <dt>confirm password</dt>
+                                <dd><g:textField name="confirmPassword"/></dd><br>
+                                <dt>Avatar (16K)</dt>
+                                <dd><input type="file" name="avatar" id="avatar" /></dd><br/>
+                                <dt></dt>
+                                <dd><g:submitButton name="register" value="Register" class="btn btn-primary btn-sm"/></dd>
+                            </dl>
+
+                        </g:uploadForm>
+                    </div>
+                </div>
+            </div><!-- right div end-->
+
         </div>
-        <div style="clear: both"></div>
     </div>
-
-</header>
-
-<div id="demo" >
-    <section id="examples" >
-
-        <div id="sidebar" class="contentCred">
-            <h3>LOGIN</h3>
-            <hr/>
-            <g:form name="loginForm" controller="login" action="validateCredential" >
-                <p>username</p><g:textField name="username"/>
-                <p>password</p><g:textField name="password"/><br><br>
-                <g:submitButton name="submit" value="Login"/>
-            </g:form><br>
-            <hr/>
-            <h3>Sign up</h3>
-            <hr/>
-
-
-                <fieldset>
-                    <legend>Avatar Upload</legend>
-
-                    <g:uploadForm name="register" controller="user" action="createUser">
-
-                        <p>first name</p> <g:textField name="firstName"/>
-                        <p>last name</p><g:textField name="lastName"/>
-                        <p>email</p><g:textField name="email"/>
-                        <p>username</p> <g:textField name="username"/>
-                        <p>password</p><g:textField name="password"/>
-                        <p>confirm password</p><g:textField name="confirmPassword"/><br><br>
-
-                        <label for="avatar">Avatar (16K)</label>
-                        <input type="file" name="avatar" id="avatar" />
-                        <div style="font-size:0.8em; margin: 1.0em;">
-                            For best results, your avatar should have a width-to-height ratio of 4:5.
-                            For example, if your image is 80 pixels wide, it should be 100 pixels high.
-                        </div>
-                        <g:submitButton name="register" value="register"/>
-                    </g:uploadForm>
-                </fieldset>
-
-        </div>
-
-
-        <!-- content -->
-       <h2>Recent shared</h2>
-        <div  class="content " >
-            <hr /><br>
-            <ls:recentShares/>
-            <hr />
-
-        </div>
-
-
-
-
-        <!-- content -->
-        <h2>Top Posts</h2>
-        <div   class="content ">
-            <hr /><br>
-            <ls:topPosts/>
-            <hr />
-
-        </div>
-    </section>
 </div>
-
-<footer>
-
-</footer>
-
-<!-- Google CDN jQuery with fallback to local -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="jquery-1.11.0.min.js"><\/script>')</script>
-
-<!-- custom scrollbar plugin -->
-<script src="jquery.mCustomScrollbar.concat.min.js"></script>
-<asset:javascript src="jquery.mCustomScrollbar.concat.min.js" />
-
-<script>
-    (function($){
-        $(window).load(function(){
-
-            $(".content").mCustomScrollbar({
-                snapAmount:10,
-                scrollButtons:{enable:true},
-                keyboard:{scrollAmount:40},
-                mouseWheel:{deltaFactor:40},
-                scrollInertia:200
-            });
-
-        });
-    })(jQuery);
-</script>
 </body>
 </html>

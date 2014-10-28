@@ -57,7 +57,7 @@ class ApplicationTagLib {
             def fullName = it.user.firstname + " " + it.user.lastname
 
 
-            out << g.render(template: "/templates/topPosts" ,model: [fullName :fullName,username:username , topicName : topicName , description: description])
+            out << g.render(template: "/templates/recentShared" ,model: [fullName :fullName,username:username , topicName : topicName , description: description])
 
         }
 

@@ -1,17 +1,16 @@
-<div>
-    <br>
-    <div class="avatar" style="float: left; margin-top: 20px;">
+<div class="media">
+    <a class="pull-left" href="#">
         <g:if test="${user.avatar}">
             <img class="avatar" src="${createLink(controller:'user', action:'avatar_image', id:user.ident())}" />
         </g:if>
         <g:else>
-        <img src="http://dummyimage.com/150x150/000/fff.jpg" alt="Avatar" class="avatar" />
-        </g:else>
+            <img src="http://dummyimage.com/150x150/000/fff.jpg" alt="Avatar" class="avatar" />
+        </g:else>    </a>
+    <div class="media-body">
+        <br/>
+        <h4 class="media-heading">${name} <small>@${username}  </small></h4>
+        <br/><br/>
+        <p>Subscription : ${totalSubscription}  Topics : ${totalTopic}</p>
+
     </div>
-    <div class="comment-content" style="float: right; margin-right: 64px;">
-     <p style="font: 10px"><b>${name}</b></p>
-     <p>@${username}</p>
-     <p>Subscription : ${totalSubscription}  Topics : ${totalTopic}</p>
-    </div>
-    <div class="clear-both"></div>
 </div>
