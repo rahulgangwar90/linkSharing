@@ -84,7 +84,7 @@ class ApplicationTagLib {
         def name = "${user.firstname} ${user.lastname} "
         def username = user.username
 
-        def readingList = ReadingItem.findAllByUser(user)
+        def readingList = ReadingItem.findAllByUserAndIsRead(user,false)
 
 
 

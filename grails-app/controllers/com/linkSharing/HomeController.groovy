@@ -85,14 +85,18 @@ class HomeController {
         User user = User.findByUsername(session.getAttribute("username"))
         Topic topic = new Topic(user: user, name: topicName, visibility: visibility)
 
+        Subscription subs = new Subscription(seriousness : "Serious",topic: topic ,user: user)
+
 
         if (!topic.save(flush: true)) {
             topic.errors.each {
                 println it
             }
         }
-        else
+        else {
+            subs.save(flush: true)
             println "Topic added successfully !!"
+        }
 
         dashboard()
 
