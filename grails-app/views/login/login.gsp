@@ -14,12 +14,12 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active">
                     <a href="#"><b>LinkSharing</b></a>
@@ -63,12 +63,14 @@
     </div><!-- /.container-fluid -->
 </nav>
 
+<br/><br/><br/><br/>
+
 <div class="container">
 
     <div class="row">
 
         <!-- left div-->
-        <div class="col-md-7 panel panel-default">
+        <div class="col-md-7 ">
             <div class="row ">
                 <div class="panel panel-default">
                     <div class="panel-heading">

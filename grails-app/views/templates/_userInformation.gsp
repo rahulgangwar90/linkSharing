@@ -8,8 +8,10 @@
         </g:else>    </a>
     <div class="media-body">
         <br/>
-        <h4 class="media-heading">${name} <small>@${username}  </small></h4>
-        <br/><br/>
+        <h4 class="media-heading">${name} </h4>
+        <br/>
+        <p><small>@${username}  </small></p>
+        <br/>
         <p>Subscription : ${totalSubscription}  Topics : ${totalTopic}</p>
 
     </div>

@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
 
@@ -35,7 +35,7 @@
                 </button>
             </form>
 
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right ">
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">${session.getAttribute("username")} <span class="caret"></span></a>
@@ -54,7 +54,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#">Logout</a>
+                            <g:link controller="login" action="logout"> Logout</g:link>
                         </li>
                     </ul>
                 </li>
@@ -63,6 +63,8 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+
+<br/><br/><br/><br/>
 
 <div class="container">
 
@@ -94,7 +96,7 @@
                                 <dt>Visibility*</dt>
                                 <dd><g:select name="visibility" from="${com.linkSharing.Topic.Visibility.values()}" /></dd><br/>
                                 <dt></dt>
-                                <dd><g:submitButton name="Save" /></dd>
+                                <dd><g:submitButton name="Save" class="btn btn-primary btn-sm"/></dd>
                             </dl>
                         </g:form>
                     </div>
@@ -114,7 +116,7 @@
                                 <dt>Topic*</dt>
                                 <dd><g:select name="criteria.topic" from="${topicList}" optionKey="id" optionValue="name" noSelection="['':'-Select topic-']"/></dd><br/>
                                 <dt></dt>
-                                <dd><g:submitButton name="Invite" /></dd>
+                                <dd><g:submitButton name="Invite" class="btn btn-primary btn-sm"/></dd>
                             </dl>
                         </g:form>
                     </div>
@@ -136,20 +138,24 @@
                 <div class="row panel panel-default">
                     <ul id="myTab1" class="nav nav-tabs">
                         <li class="active">
-                            <a href="#inbox" data-toggle="tab">INBOX   <span class="badge">14</span></a>
+                            <a href="#inbox" data-toggle="tab">INBOX   <ls:inboxCount/></a>
                         </li>
                     </ul>
                 </li>
                 </ul>
 
                     <div id="myTab1Content" class="tab-content">
-                        <div class="tab-pane fade in active" id="inbox">
+                        <div class="col-lg-10 tab-pane fade in active" id="inbox">
+                            <br/>
+                            <div style="overflow: auto; height: 300px;">
                             <ls:inbox/>
+                            </div>
                         </div>
                     </div>
                 </div><!-- right div end-->
             </div>
 
+        <br/>
             <div class="row panel panel-default">
                 <ul id="myTab" class="nav nav-tabs">
                     <li class="active">
@@ -174,7 +180,7 @@
                                 <dt>Topic*</dt>
                                 <dd><g:select name="criteria.topic" from="${topicList}" optionKey="id" optionValue="name" noSelection="['':'-Select topic-']"/></dd><br/>
                                 <dt></dt>
-                                <dd><g:submitButton name="share" /></dd>
+                                <dd><g:submitButton name="share" class="btn btn-primary btn-sm"/></dd>
                             </dl>
                         </g:form>
                     </div>
@@ -189,7 +195,7 @@
                                 <dt>Topic*</dt>
                                 <dd><g:select name="criteria.topic" from="${topicList}" optionKey="id" optionValue="name" noSelection="['':'-Select topic-']"/></dd><br/>
                                 <dt></dt>
-                                <dd><g:submitButton name="share" /></dd>
+                                <dd><g:submitButton name="share" class="btn btn-primary btn-sm"/></dd>
                             </dl>
                         </g:form>
                     </div>

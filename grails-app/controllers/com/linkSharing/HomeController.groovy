@@ -30,13 +30,31 @@ class HomeController {
         User user = User.findByUsername(session.getAttribute("username"))
         Resource resource = new LinkResource(topic:topic,user: user,description:description,url: link)
 
+        def userListSubscriberToTopic = Subscription.findByTopic(topic)
+
+        def readingList =[]
+
+        userListSubscriberToTopic.each {
+
+            ReadingItem readingItem = new ReadingItem(user:userListSubscriberToTopic.user ,resource: resource , isRead: false)
+            readingList.add(readingItem)
+
+        }
+
+        ReadingItem readingItem = new ReadingItem(user:user ,resource: resource , isRead: false)
+
         if (!resource.save(flush: true)) {
             resource.errors.each {
                 println it
             }
         }
-        else
+        else {
             println "Link resource added successfully !!"
+
+            readingList.each {
+                it.save(flush: true)
+            }
+        }
 
         dashboard()
 

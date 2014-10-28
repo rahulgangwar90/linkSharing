@@ -105,5 +105,9 @@ class UserController {
         out.close()
     }
 
+    def markAsRead(){
+
+    }
+
 
 }

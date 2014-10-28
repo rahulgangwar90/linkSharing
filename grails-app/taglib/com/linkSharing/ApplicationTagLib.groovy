@@ -88,15 +88,25 @@ class ApplicationTagLib {
 
 
 
-        readingList.each {
+        readingList.reverseEach {
 
             out << g.render(template: "/templates/inbox", model: [name:name,username: username,description:it.resource.description])
 
         }
 
+    }
 
 
 
+    def inboxCount = {
+
+         User user = User.findByUsername( session.getAttribute("username"))
+        def name = "\u0024{user.firstname} \u0024{user.lastname} "
+        def username = user.username
+
+        def readingListCount = ReadingItem.countByUser(user)
+
+        out << g.render(template: "/templates/badge", model: [count:readingListCount])
 
     }
 }
