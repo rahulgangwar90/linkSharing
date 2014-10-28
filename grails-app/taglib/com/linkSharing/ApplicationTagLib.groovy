@@ -74,7 +74,7 @@ class ApplicationTagLib {
 
 
 
-        out << g.render(template: "/templates/userInformation" , model: [name:name,username:username,totalSubscription:totalSubscription,totalTopic:totalTopic])
+        out << g.render(template: "/templates/userInformation" , model: [name:name,username:username,totalSubscription:totalSubscription,totalTopic:totalTopic,user:user])
 
     }
 

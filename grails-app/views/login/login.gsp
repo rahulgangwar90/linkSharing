@@ -59,15 +59,30 @@
             <hr/>
             <h3>Sign up</h3>
             <hr/>
-            <g:form name="register" controller="user" action="createUser">
-                <p>first name</p> <g:textField name="firstName"/>
-                <p>last name</p><g:textField name="lastName"/>
-                <p>email</p><g:textField name="email"/>
-                <p>username</p> <g:textField name="username"/>
-                <p>password</p><g:textField name="password"/>
-                <p>confirm password</p><g:textField name="confirmPassword"/><br><br>
-                <g:submitButton name="register" value="register"/>
-            </g:form>
+
+
+                <fieldset>
+                    <legend>Avatar Upload</legend>
+
+                    <g:uploadForm name="register" controller="user" action="createUser">
+
+                        <p>first name</p> <g:textField name="firstName"/>
+                        <p>last name</p><g:textField name="lastName"/>
+                        <p>email</p><g:textField name="email"/>
+                        <p>username</p> <g:textField name="username"/>
+                        <p>password</p><g:textField name="password"/>
+                        <p>confirm password</p><g:textField name="confirmPassword"/><br><br>
+
+                        <label for="avatar">Avatar (16K)</label>
+                        <input type="file" name="avatar" id="avatar" />
+                        <div style="font-size:0.8em; margin: 1.0em;">
+                            For best results, your avatar should have a width-to-height ratio of 4:5.
+                            For example, if your image is 80 pixels wide, it should be 100 pixels high.
+                        </div>
+                        <g:submitButton name="register" value="register"/>
+                    </g:uploadForm>
+                </fieldset>
+
         </div>
 
 
