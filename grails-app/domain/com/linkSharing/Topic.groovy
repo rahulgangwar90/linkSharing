@@ -18,5 +18,10 @@ class Topic {
     static hasMany = [resources: Resource,subscriptions:Subscription]
 
     static constraints = {
+
+    }
+
+    static mapping = {
+        //id composite: ['user', 'name']
     }
 }

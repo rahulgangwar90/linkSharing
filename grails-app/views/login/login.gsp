@@ -133,9 +133,9 @@
                             <br><br>
                             <dl class="dl-horizontal">
                                 <dt>first name</dt>
-                                <dd><g:textField name="firstName"/></dd><br>
+                                <dd><g:textField name="firstname"/></dd><br>
                                 <dt>last name</dt>
-                                <dd><g:textField name="lastName"/></dd><br>
+                                <dd><g:textField name="lastname"/></dd><br>
                                 <dt>email</dt>
                                 <dd><g:textField name="email"/></dd><br>
                                 <dt>username</dt>

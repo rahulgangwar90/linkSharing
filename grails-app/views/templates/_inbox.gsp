@@ -6,8 +6,16 @@
         <h4 class="media-heading">${name} <small>@${username}  </small></h4>
         <p>${description}</p>
 
+
         <div>
-            <g:link controller="user" action="markAsRead" > <p class="pull-right">mark as read</p></g:link>
+
+            <g:if  test="com.linkSharing.LinkResource=${currentResource.class}">
+                <a href="${currentResource.url}" target="_blank"><p class="pull-left">View full site</p></a>
+            </g:if>
+            <g:else>
+                <a href="${currentResource.filePath}" target="_blank"><p class="pull-left">Download</p></a>
+            </g:else>
+            <g:link controller="user" action="markAsRead" params="[currentResourceId:currentResource.id]"> <p class="pull-right">mark as read</p></g:link>
         </div>
 
     </div>

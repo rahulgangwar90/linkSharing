@@ -24,10 +24,22 @@ class UserController {
 
     // added by me
 
-    def createUser(){
+    def createUser(UserCO userCO){
 
 
         println "------------- creating user ----------"
+
+        if(!userCO.validate()) {
+            println "command object validation failed"
+            println "error :" + userCO.errors
+            render view: "/login/login", model: [user: userCO]
+            return
+        }
+
+        def user = new User()
+        user.properties = userCO.properties
+
+
 
         // Get the avatar file from the multi-part request
         def f = request.getFile('avatar')
@@ -36,7 +48,7 @@ class UserController {
         println "file content ................${f.bytes}"
 
 
-        User user = new User(firstname: params.firstName , lastname: params.lastName , email: params.email,username: params.username, password: params.password)
+       // User user = new User(firstname: params.firstName , lastname: params.lastName , email: params.email,username: params.username, password: params.password)
 
 
         // List of OK mime-types
@@ -65,14 +77,7 @@ class UserController {
             render(view:'/login/login', model:[user:user])
             return
         }
-        //flash.message = "Avatar (${user.avatarType}, ${user.avatar.size()} bytes) uploaded."
 
-
-
-
-        /*println user.dump()
-
-        user.save(flush: true )*/
 
         if(user.hasErrors()){
             render "user not created !!! try again with valid values"
@@ -107,6 +112,30 @@ class UserController {
 
     def markAsRead(){
 
+        println "marking resource as read"
+
+
+        Resource resource = Resource.get(params.currentResourceId)
+
+        User user = User.findByUsername(session.getAttribute("username"))
+        ReadingItem readingItem = ReadingItem.findByUserAndResource(user,resource)
+
+        readingItem.isRead = true
+
+        readingItem.save(flush: true)
+
+        redirect controller: "home" , action: "dashboard"
+
+
+
+    }
+
+
+    def showUserDetails(){
+
+        println "displaying user details"
+
+        render  "this page show user details"
     }
 
 
