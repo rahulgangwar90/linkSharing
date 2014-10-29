@@ -139,3 +139,15 @@ log4j.main = {
 
 
 }
+
+environments {
+    development {
+        uploadFolder = "/home/intelligrape/newDir/"
+    }
+    test {
+        uploadFolder = "/home/intelligrape/newDir/"
+    }
+    production {
+        uploadFolder = "/home/intelligrape/newDir/"
+    }
+}

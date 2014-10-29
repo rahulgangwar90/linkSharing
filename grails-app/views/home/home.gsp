@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Dashboard</title>
 
     <!-- Include bootstrap stylesheets -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -165,8 +165,7 @@
                         <a href="#docRes" data-toggle="tab">Document resource</a>
                     </li>
                 </ul>
-            </li>
-            </ul>
+
 
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade in active" id="linkRes">
@@ -185,11 +184,11 @@
                         </g:form>
                     </div>
                     <div class="tab-pane fade" id="docRes">
-                        <g:form controller="user" action="createUser" name="shareDocRes">
+                        <g:uploadForm controller="documentResource" action="createDocRes" name="myUpload">
                             <br/>
                             <dl class="dl-horizontal">
                                 <dt>Document*</dt>
-                                <dd><g:uploadForm name="myUpload"><input type="file" name="myFile" /></g:uploadForm></dd><br/>
+                                <dd><input type="file" name="file" /></dd><br/>
                                 <dt>Description*</dt>
                                 <dd><g:textArea name="description" /></dd><br/>
                                 <dt>Topic*</dt>
@@ -197,7 +196,7 @@
                                 <dt></dt>
                                 <dd><g:submitButton name="share" class="btn btn-primary btn-sm"/></dd>
                             </dl>
-                        </g:form>
+                        </g:uploadForm>
                     </div>
                 </div>
             </div><!-- right div end-->

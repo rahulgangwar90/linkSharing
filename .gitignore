@@ -1,3 +1,5 @@
-/*.iml
-/*.ibr
-target*/
+*.iml
+*.ibr
+target/
+.idea/
+test/

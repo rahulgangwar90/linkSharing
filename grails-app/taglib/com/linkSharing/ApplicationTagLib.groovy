@@ -109,6 +109,14 @@ class ApplicationTagLib {
         out << g.render(template: "/templates/badge", model: [count:readingListCount])
 
     }
+
+    def subscriptions(){
+
+        User user = User.findByUsername(session.getAttribute("username"))
+
+
+
+    }
 }
 
 

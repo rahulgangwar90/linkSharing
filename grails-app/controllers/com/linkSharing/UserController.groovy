@@ -110,25 +110,7 @@ class UserController {
         out.close()
     }
 
-    def markAsRead(){
 
-        println "marking resource as read"
-
-
-        Resource resource = Resource.get(params.currentResourceId)
-
-        User user = User.findByUsername(session.getAttribute("username"))
-        ReadingItem readingItem = ReadingItem.findByUserAndResource(user,resource)
-
-        readingItem.isRead = true
-
-        readingItem.save(flush: true)
-
-        redirect controller: "home" , action: "dashboard"
-
-
-
-    }
 
 
     def showUserDetails(){
