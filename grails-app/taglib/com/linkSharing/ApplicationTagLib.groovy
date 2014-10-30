@@ -137,11 +137,9 @@ class ApplicationTagLib {
                  isOwned = false
                 if(Subscription.findByUserAndTopic(user,it.topic)){
                     isSubscribed = true
-                    println "subscribed user"
                 }
                 else{
                     isSubscribed = false
-                    println "unSubscribed user"
                 }
 
 
