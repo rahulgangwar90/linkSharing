@@ -84,7 +84,13 @@ class ApplicationTagLib {
         def name = "${user.firstname} ${user.lastname} "
         def username = user.username
 
-        def readingList = ReadingItem.findAllByUserAndIsRead(user,false)
+        //def readingList = ReadingItem.findAllByUserAndIsRead(user,false)
+
+        def readingList = ReadingItem.createCriteria().list {
+
+            eq("user",user)
+
+        }
 
 
 
@@ -105,6 +111,8 @@ class ApplicationTagLib {
         def username = user.username
 
         def readingListCount = ReadingItem.countByUserAndIsRead(user,false)
+
+
 
         out << g.render(template: "/templates/badge", model: [count:readingListCount])
 
