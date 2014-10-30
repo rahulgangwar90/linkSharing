@@ -44,26 +44,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/login/login.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.7659574" vertical-offset="481" max-vertical-offset="2145">
-              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginController.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/linkSharing/LoginController.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.73913" vertical-offset="0" max-vertical-offset="780">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserController.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/linkSharing/UserController.groovy">
           <provider selected="true" editor-type-id="text-editor">
@@ -78,17 +58,27 @@
         <entry file="file://$PROJECT_DIR$/grails-app/services/com/linkSharing/BootstrapService.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="652" max-vertical-offset="1875">
-              <caret line="97" column="16" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
+              <caret line="60" column="19" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BootStrap.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LogService.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/services/com/linkSharing/LogService.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BootStrap.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3960396" vertical-offset="0" max-vertical-offset="606">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -137,11 +127,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeController.groovy" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="HomeController.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/linkSharing/HomeController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.695652" vertical-offset="270" max-vertical-offset="1215">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7390511" vertical-offset="585" max-vertical-offset="1230">
+              <caret line="66" column="27" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/home/home.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.4468083" vertical-offset="1651" max-vertical-offset="3345">
+              <caret line="124" column="60" selection-start-line="124" selection-start-column="55" selection-end-line="124" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -157,7 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
         <option value="$PROJECT_DIR$/target/stacktrace.log" />
         <option value="$PROJECT_DIR$/grails-app/views/login/dashboard.gsp" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/linkSharing/Resource.groovy" />
@@ -204,10 +203,11 @@
         <option value="$PROJECT_DIR$/grails-app/controllers/com/linkSharing/LoginController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/com/linkSharing/GlobalFilters.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/templates/_trendingTopics.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/linkSharing/HomeController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/linkSharing/UserController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/services/com/linkSharing/BootstrapService.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/services/com/linkSharing/LogService.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/com/linkSharing/HomeController.groovy" />
       </list>
     </option>
   </component>
@@ -416,32 +416,6 @@
               <option name="myItemId" value="linkSharing" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UtilService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkSharing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkSharing" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkSharing" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -514,7 +488,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="boo&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/conf/BootStrap.groovy&#10;res&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/domain/com/linkSharing/Resource.groovy&#10;user&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/controllers/com/linkSharing/UserController.groovy&#10;home&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/controllers/com/linkSharing/HomeController.groovy&#10;trending&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_trendingTopics.gsp&#10;login&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/controllers/com/linkSharing/LoginController.groovy&#10;globalfi&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/conf/com/linkSharing/GlobalFilters.groovy&#10;confi&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/conf/Config.groovy&#10;inbo&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_inbox.gsp&#10;readin&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/controllers/com/linkSharing/ReadingItemController.groovy&#10;inbox&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_inbox.gsp&#10;UTIL&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/services/com/linkSharing/UtilService.groovy&#10;top&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/controllers/com/linkSharing/TopicController.groovy&#10;util&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/services/com/linkSharing/UtilService.groovy&#10;_user&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_userInformation.gsp&#10;appli&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/taglib/com/linkSharing/ApplicationTagLib.groovy&#10;to&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/domain/com/linkSharing/Topic.groovy&#10;subs&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/domain/com/linkSharing/Subscription.groovy&#10;app&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/taglib/com/linkSharing/ApplicationTagLib.groovy&#10;BO&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/conf/BootStrap.groovy&#10;config&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/conf/Config.groovy&#10;config.&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/conf/Config.groovy&#10;in&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_inbox.gsp&#10;userin&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_userInformation.gsp&#10;doc&#9;null&#9;null&#10;lo&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/login/login.gsp&#10;reso&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/domain/com/linkSharing/Resource.groovy&#10;topic&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/domain/com/linkSharing/Topic.groovy&#10;boot&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/conf/BootStrap.groovy&#10;log&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/login/login.gsp&#10;rec&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_recentShared.gsp&#10;inb&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_inbox.gsp&#10;shar&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_recentShared.gsp&#10;rece&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_recentShared.gsp&#10;recen&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_recentShared.gsp&#10;_in&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_inbox.gsp&#10;userco&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/controllers/com/linkSharing/UserController.groovy" />
+    <property name="SearchEverywhereHistoryKey" value="home&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/home/home.gsp&#10;boo&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/conf/BootStrap.groovy&#10;res&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/domain/com/linkSharing/Resource.groovy&#10;user&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/controllers/com/linkSharing/UserController.groovy&#10;trending&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_trendingTopics.gsp&#10;login&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/controllers/com/linkSharing/LoginController.groovy&#10;globalfi&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/conf/com/linkSharing/GlobalFilters.groovy&#10;confi&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/conf/Config.groovy&#10;inbo&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_inbox.gsp&#10;readin&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/controllers/com/linkSharing/ReadingItemController.groovy&#10;inbox&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_inbox.gsp&#10;UTIL&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/services/com/linkSharing/UtilService.groovy&#10;top&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/controllers/com/linkSharing/TopicController.groovy&#10;util&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/services/com/linkSharing/UtilService.groovy&#10;_user&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_userInformation.gsp&#10;appli&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/taglib/com/linkSharing/ApplicationTagLib.groovy&#10;to&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/domain/com/linkSharing/Topic.groovy&#10;subs&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/domain/com/linkSharing/Subscription.groovy&#10;app&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/taglib/com/linkSharing/ApplicationTagLib.groovy&#10;BO&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/conf/BootStrap.groovy&#10;config&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/conf/Config.groovy&#10;config.&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/conf/Config.groovy&#10;in&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_inbox.gsp&#10;userin&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_userInformation.gsp&#10;doc&#9;null&#9;null&#10;lo&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/login/login.gsp&#10;reso&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/domain/com/linkSharing/Resource.groovy&#10;topic&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/domain/com/linkSharing/Topic.groovy&#10;boot&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/conf/BootStrap.groovy&#10;log&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/login/login.gsp&#10;rec&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_recentShared.gsp&#10;inb&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_inbox.gsp&#10;shar&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_recentShared.gsp&#10;rece&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_recentShared.gsp&#10;recen&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_recentShared.gsp&#10;_in&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/views/templates/_inbox.gsp&#10;userco&#9;FILE&#9;file:///home/intelligrape/workspace/Grails/LinkSharing/linkSharing/grails-app/controllers/com/linkSharing/UserController.groovy" />
     <property name="FullScreen" value="false" />
     <property name="LayoutCode.rearrangeEntriesGSP" value="false" />
     <property name="LayoutCode.rearrangeEntriesGroovy" value="false" />
@@ -825,12 +799,12 @@
       <workItem from="1414573575519" duration="16607000" />
       <workItem from="1414647381835" duration="5319000" />
       <workItem from="1414652790002" duration="8346000" />
-      <workItem from="1414665983921" duration="8415000" />
+      <workItem from="1414665983921" duration="9226000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214641000" />
+    <option name="totallyTimeSpent" value="215452000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="24" width="1311" height="744" extended-state="6" />
@@ -930,13 +904,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/views/readingItem/create.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/home/_sampleForTag.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
@@ -1158,14 +1125,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/home/home.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7162162" vertical-offset="1402" max-vertical-offset="3345">
-          <caret line="97" column="36" selection-start-line="97" selection-start-column="36" selection-end-line="97" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/linkSharing/Topic.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.2040815" vertical-offset="0" max-vertical-offset="495">
@@ -1328,10 +1287,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/linkSharing/HomeController.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.695652" vertical-offset="270" max-vertical-offset="1215">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1344,18 +1303,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/services/com/linkSharing/BootstrapService.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/home/home.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="652" max-vertical-offset="1875">
-          <caret line="97" column="16" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
+        <state vertical-scroll-proportion="-4.4468083" vertical-offset="1651" max-vertical-offset="3345">
+          <caret line="124" column="60" selection-start-line="124" selection-start-column="55" selection-end-line="124" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/services/com/linkSharing/BootstrapService.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3960396" vertical-offset="0" max-vertical-offset="606">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="652" max-vertical-offset="1875">
+          <caret line="60" column="19" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/services/com/linkSharing/LogService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/linkSharing/HomeController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7390511" vertical-offset="585" max-vertical-offset="1230">
+          <caret line="66" column="27" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
           <folding />
         </state>
       </provider>

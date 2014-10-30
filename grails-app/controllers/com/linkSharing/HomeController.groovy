@@ -7,6 +7,7 @@ class HomeController {
 
     def mailService
     UtilService utilService
+    def logService
 
 
     def index() {
@@ -34,7 +35,7 @@ class HomeController {
        List topics = Topic.createCriteria().list {
 
            'subscriptions' {
-               eq("user", User.get(2))
+               eq("user", user)
 
            }
        };
@@ -59,8 +60,8 @@ class HomeController {
 
         def fromEmail = User.findByUsername(session.getAttribute("username")).email
 
-        println "fromEmail : ${fromEmail}  toEmail : ${toEmail}   topic : ${topicId}"
-        println "sending mail"
+        logService.log( "fromEmail : ${fromEmail}  toEmail : ${toEmail}   topic : ${topicId}")
+
 
         mailService.sendMail {
             to "${toEmail}"
