@@ -31,7 +31,14 @@ class HomeController {
    def dashboard(){
 
        User user = User.findByUsername(session.getAttribute("username"))
-       List topics = Topic.findAllByUser(user)
+       List topics = Topic.createCriteria().list {
+
+           'subscriptions' {
+               eq("user", User.get(2))
+
+           }
+       };
+
 
        render view: "home" ,model:['topicList':topics]
    }

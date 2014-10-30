@@ -15,19 +15,25 @@ class UserController {
 
     }
 
+    def beforeInterceptor = [action: this.&myAction]
 
-    def upload_avatar() {
+    def myAction() {
+        println "inside my action"
+    }
+
+
+   /* def upload_avatar() {
         def user = springSecurityService.currentUser // or however you select the current user
 
 
-    }
+    }*/
 
     // added by me
 
     def createUser(UserCO userCO){
 
 
-        println "------------- creating user ----------"
+        log.info "------------- creating user ----------"
 
         if(!userCO.validate()) {
             println "command object validation failed"
@@ -44,8 +50,8 @@ class UserController {
         // Get the avatar file from the multi-part request
         def f = request.getFile('avatar')
 
-        println "file type................ ${f.class}"
-        println "file content ................${f.bytes}"
+        log.info "file type................ ${f.class}"
+        log.info "file content ................${f.bytes}"
 
 
        // User user = new User(firstname: params.firstName , lastname: params.lastName , email: params.email,username: params.username, password: params.password)
@@ -53,14 +59,12 @@ class UserController {
 
         // List of OK mime-types
         if(f.bytes!=[]) {
-            println "in if============"
             if (!okcontents.contains(f.getContentType())) {
                 flash.message = "Avatar must be one of: ${okcontents}"
                 render(view: '/login/login', model: [user: user])
                 return
             }
             else{
-                println "in else==========="
                 // Save the image and mime type
                 user.avatar = f.bytes
                 user.avatarType = f.contentType
@@ -117,9 +121,16 @@ class UserController {
 
     def showUserDetails(){
 
-        println "displaying user details"
+        log.info "displaying user details"
 
         render  "this page show user details"
+    }
+
+    //to display user list only to admin
+    def list(){
+
+        def userlist = User.list()
+
     }
 
 
