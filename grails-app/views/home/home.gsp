@@ -85,6 +85,16 @@
             <div class="row ">
                 <div class="panel panel-default">
                     <div class="panel-heading">
+                        Trending topics
+                    </div>
+                    <div class="panel-body">
+                        <ls:trendingTopics/>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
                         Create topic
                     </div>
                     <div class="panel-body">

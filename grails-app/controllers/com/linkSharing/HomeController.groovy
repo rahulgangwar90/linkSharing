@@ -33,14 +33,6 @@ class HomeController {
 
    def dashboard(){
 
-       if(session.user){
-           dashboard()
-
-       }
-       else{
-           render view : "/login/login"
-       }
-
        User user = User.findByUsername(session.getAttribute("username"))
        List topics = Topic.findAllByUser(user)
 

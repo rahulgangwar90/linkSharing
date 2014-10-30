@@ -1,6 +1,6 @@
 package com.linkSharing
 
-class Topic {
+class Topic implements Serializable {
 
     String name
     User user
@@ -22,6 +22,6 @@ class Topic {
     }
 
     static mapping = {
-        //id composite: ['user', 'name']
+       // id composite: ['user', 'name']
     }
 }

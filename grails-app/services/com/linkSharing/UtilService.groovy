@@ -2,7 +2,7 @@ package com.linkSharing
 
 import grails.transaction.Transactional
 
-@Transactional
+@Transactional(readOnly = false)
 class UtilService {
 
 
@@ -79,5 +79,69 @@ class UtilService {
             }
         }
 
+    }
+
+
+
+   def modifyTopic(params,session){
+
+      def topicNewName = params.topicNewName
+      def topicOldName = params.topicOldName
+      User user = User.findByUsername(session.getAttribute("username"))
+
+     Topic topic = Topic.get(params.topicId)
+
+     topic.name = topicNewName
+
+     topic.save(flush: true)
+
+     if (topic.hasErrors()){
+         println topic.errors
+     }
+     else{
+         println "topic modified successfully"
+     }
+
+
+   }
+
+    def subscribe(params,session){
+
+        def topicId = params.topicId
+        User user = User.findByUsername(session.getAttribute("username"))
+        Topic topic = Topic.get(topicId)
+
+        Subscription subscription = new Subscription(user: user,topic:topic,seriousness: "Serious")
+
+        subscription.save(flush: true)
+
+        if (subscription.hasErrors()){
+            println "subscription failed"
+            println subscription.errors
+        }
+        else{
+            println "subscription successful"
+
+        }
+    }
+
+    def unSubscribe(params,session){
+
+        def topicId = params.topicId
+        User user = User.findByUsername(session.getAttribute("username"))
+        Topic topic = Topic.get(topicId)
+
+        Subscription subscription = Subscription.findByUserAndTopic(user,topic)
+
+        subscription.delete(flush: true)
+
+        if (subscription.hasErrors()){
+            println "unSubscribe failed"
+            println subscription.errors
+        }
+        else{
+            println "unSubscription successful"
+
+        }
     }
 }

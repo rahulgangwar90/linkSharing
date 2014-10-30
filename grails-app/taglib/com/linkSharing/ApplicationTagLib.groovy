@@ -110,13 +110,52 @@ class ApplicationTagLib {
 
     }
 
-    def subscriptions(){
+    def trendingTopics = {
 
+
+        def list = Resource.list(sort: "dateCreated",order: "desc", offset: 0 , max: 5)   // todo apply find trending topic logic
+
+//        def listOfOwnedTopics = Topic.findByUser(User.findByUsername(session.getAttribute("username")))
         User user = User.findByUsername(session.getAttribute("username"))
 
+        list.each {
 
+            def totalPost = Resource.countByTopic(it.topic)
+            def totalSubscriptions = Subscription.countByTopic(it.topic)
+
+            def topicOwner = Topic.findByName(it.topic.name)
+            boolean isOwned
+            boolean isSubscribed
+
+
+            if(Topic.findByNameAndUser(it.topic.name,user)){
+
+                 isOwned = true
+
+            }
+            else{
+                 isOwned = false
+                if(Subscription.findByUserAndTopic(user,it.topic)){
+                    isSubscribed = true
+                    println "subscribed user"
+                }
+                else{
+                    isSubscribed = false
+                    println "unSubscribed user"
+                }
+
+
+            }
+
+            out << g.render(template: "/templates/trendingTopics", model: [isSubscribed:isSubscribed,isOwned:isOwned,totalPost:totalPost,totalSubscriptions:totalSubscriptions,topicOwner:topicOwner])
+
+
+
+        }
 
     }
+
+
 }
 
 

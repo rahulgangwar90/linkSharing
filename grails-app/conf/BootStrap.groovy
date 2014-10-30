@@ -23,7 +23,7 @@ class BootStrap {
         println "========================= adding user =========================="
 
         User user = new User(firstname: "rahul", lastname: "gangwar", email: "rahulgangwar90@gmail.com", password: "1234", username: "rahul")
-        User user1 = new User(firstname: "rohit", lastname: "singh", email: "rohit@gmail.com", password: "5678", username: "rohit")
+        User user1 = new User(firstname: "rohit", lastname: "singh", email: "rohit@gmail.com", password: "1234", username: "rohit")
         user.save()
         user1.save()
 
@@ -73,9 +73,11 @@ def createTopicsAndAutoSubscribe() {
         Resource resource9 = new LinkResource(url: "http://www.google.com",user:user,topic:topic2,description: "linkResource1-4 for topic no 2")
         Resource resource10 = new LinkResource(url: "http://www.google.com",user:user,topic:topic2,description: "linkResource1-5 for topic no 2")
 
-        List list = [resource1,resource2,resource3,resource4,resource5,resource6,resource7,resource8,resource9,resource10]
+        List list = [resource6,resource1,resource10,resource2,resource3,resource4,resource5,resource7,resource8,resource9]
 
         list.each{
+
+            //sleep(3000)
             it.save(flush: true,failOnError: true)
         }
 
