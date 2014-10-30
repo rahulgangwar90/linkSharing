@@ -67,7 +67,7 @@ class BootstrapService {
 
         list.each{
 
-            //sleep(3000)
+            sleep(1000)
             it.save(flush: true,failOnError: true)
         }
 

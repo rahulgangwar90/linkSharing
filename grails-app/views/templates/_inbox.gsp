@@ -1,7 +1,7 @@
 <%@ page import="com.linkSharing.LinkResource" %>
 <div class="media">
     <a class="pull-left" href="#">
-        <img src="http://dummyimage.com/70x70/000/fff.jpg" alt="Avatar" class="avatar" />
+        <img src="http://dummyimage.com/70x70/000/fff.jpg" alt="Avatar" class="avatar" height="50" width="50"/>
     </a>
     <div class="media-body">
         <h4 class="media-heading">${name} <small>@${username}  </small></h4>

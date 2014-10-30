@@ -84,7 +84,7 @@
             </div>
             <div class="row ">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading ">
                         Trending topics
                     </div>
                     <div class="panel-body">
@@ -155,7 +155,7 @@
                 </ul>
 
                     <div id="myTab1Content" class="tab-content">
-                        <div class="col-lg-10 tab-pane fade in active" id="inbox">
+                        <div class="col-lg-12 tab-pane fade in active" id="inbox">
                             <br/>
                             <div style="overflow: auto; height: 300px;">
                             <ls:inbox/>

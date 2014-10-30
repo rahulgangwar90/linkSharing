@@ -3,7 +3,7 @@
         <g:link class="pull-left" controller="user" action="showUserDetails">
 
             <g:if test="${topicOwner.user.avatar}">
-                <img class="avatar"
+                <img class="avatar" height="50" width="50"
                      src="${createLink(controller: 'user', action: 'avatar_image', id: topicOwner.user.ident())}"/>
             </g:if>
             <g:else>
@@ -15,7 +15,7 @@
                 <g:textField name="topicNewName" value="${topicOwner.name}"/>
                 <g:hiddenField name="topicId" value="${topicOwner.id}"/>
 
-                <g:submitButton name="submit" value="save"/>
+                <g:submitButton name="submit" class="btn btn-danger btn-xs" value="save"/>
             </g:form>
 
             <div>
@@ -52,7 +52,7 @@
         <g:link class="pull-left" controller="user" action="showUserDetails">
 
             <g:if test="${topicOwner.user.avatar}">
-                <img class="avatar"
+                <img class="avatar" height="50" width="50"
                      src="${createLink(controller: 'user', action: 'avatar_image', id: topicOwner.user.ident())}"/>
             </g:if>
             <g:else>
@@ -93,6 +93,8 @@
     </div>
 
 </g:else>
+
+<hr/>
 
 
 
