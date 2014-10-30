@@ -84,17 +84,19 @@ class UserController {
         }
         else{
             session.setAttribute("username",params.username)
-            redirect(controller: "user", action: "loginHandler", params: user)
+            session.user = user
+            redirect controller: "home" , action: "dashboard"
+           // redirect(controller: "user", action: "loginHandler", params: user)
         }
 
     }
 
-    def loginHandler(){
+   /* def loginHandler(){
 
         session.user = params.user
        redirect controller: "home" , action: "dashboard"
 
-    }
+    }*/
 
 
     def avatar_image() {

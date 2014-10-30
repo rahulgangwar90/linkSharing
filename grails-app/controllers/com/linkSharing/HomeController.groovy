@@ -18,9 +18,6 @@ class HomeController {
         else{
             render view : "/login/login"
         }
-
-
-
     }
 
     def shareLink(){

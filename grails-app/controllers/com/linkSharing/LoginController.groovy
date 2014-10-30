@@ -19,8 +19,12 @@ class LoginController {
         else{
 
             if(user.password == password){
+
+                println "validating user credential"
                 session.setAttribute("username",username)
-                redirect(controller: "user", action: "loginHandler", params: user)
+                session.user = user
+                redirect controller: "home" , action: "dashboard"
+               // redirect(controller: "user", action: "loginHandler", params: user)
 
             }
             else{
