@@ -12,6 +12,7 @@
     <!-- Optional: Incorporate the Bootstrap JavaScript plugins -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -38,7 +39,8 @@
             <ul class="nav navbar-nav navbar-right ">
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">${session.getAttribute("username")} <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">${session.getAttribute("username")} <span
+                            class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li>
                             <a href="#">Profile</a>
@@ -54,7 +56,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <g:link controller="login" action="logout"> Logout</g:link>
+                            <g:link controller="login" action="logout">Logout</g:link>
                         </li>
                     </ul>
                 </li>
@@ -77,46 +79,42 @@
                     <div class="panel-heading">
                         User profile
                     </div>
+
                     <div class="panel-body">
                         <ls:userData/>
                     </div>
                 </div>
             </div>
+
             <div class="row ">
                 <div class="panel panel-default">
                     <div class="panel-heading ">
                         Trending topics
                     </div>
-                    <div class="panel-body">
+
+                    <div class="panel-body" style="overflow: auto; height: 300px;">
                         <ls:trendingTopics/>
                     </div>
                 </div>
             </div>
-            <div class="row ">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        Create topic
-                    </div>
-                    <div class="panel-body">
-                        <g:form controller="home" action="createTopic">
-                            <br/>
-                            <dl class="dl-horizontal">
-                                <dt>Name*</dt>
-                                <dd><g:textField name="topicName" /></dd><br/>
-                                <dt>Visibility*</dt>
-                                <dd><g:select name="visibility" from="${com.linkSharing.Topic.Visibility.values()}" /></dd><br/>
-                                <dt></dt>
-                                <dd><g:submitButton name="Save" class="btn btn-primary btn-sm"/></dd>
-                            </dl>
-                        </g:form>
-                    </div>
+        <div class="row ">
+            <div class="panel panel-default">
+                <div class="panel-heading ">
+                    Subscriptions
+                </div>
+
+                <div class="panel-body" style="overflow: auto; height: 300px;">
+                    <ls:trendingTopics/>
                 </div>
             </div>
+        </div>
+
             <div class="row">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         Send invitation
                     </div>
+
                     <div class="panel-body">
 
                         <g:form controller="home" action="sendInvitation" name="sendInvite">
@@ -124,7 +122,9 @@
                                 <dt>Email*</dt>
                                 <dd><g:textField name="email"/></dd><br/>
                                 <dt>Topic*</dt>
-                                <dd><g:select name="criteria.topic" from="${topicList}" optionKey="id" optionValue="name" noSelection="['':'-Select topic-']"/></dd><br/>
+                                <dd><g:select name="criteria.topic" class="btn-default" from="${topicList}"
+                                              optionKey="id" optionValue="name"
+                                              noSelection="['': '-Select topic-']"/></dd><br/>
                                 <dt></dt>
                                 <dd><g:submitButton name="Invite" class="btn btn-primary btn-sm"/></dd>
                             </dl>
@@ -157,15 +157,17 @@
                     <div id="myTab1Content" class="tab-content">
                         <div class="col-lg-12 tab-pane fade in active" id="inbox">
                             <br/>
+
                             <div style="overflow: auto; height: 300px;">
-                            <ls:inbox/>
+                                <ls:inbox/>
                             </div>
                         </div>
                     </div>
                 </div><!-- right div end-->
             </div>
 
-        <br/>
+            <br/>
+
             <div class="row panel panel-default">
                 <ul id="myTab" class="nav nav-tabs">
                     <li class="active">
@@ -185,32 +187,59 @@
                                 <dt>Link*</dt>
                                 <dd><g:textField name="link"/></dd><br/>
                                 <dt>Description*</dt>
-                                <dd><g:textArea name="description" /></dd><br/>
+                                <dd><g:textArea name="description"/></dd><br/>
                                 <dt>Topic*</dt>
-                                <dd><g:select name="criteria.topic" from="${topicList}" optionKey="id" optionValue="name" noSelection="['':'-Select topic-']"/></dd><br/>
+                                <dd><g:select name="criteria.topic" class="btn-default" from="${topicList}"
+                                              optionKey="id" optionValue="name"
+                                              noSelection="['': '-Select topic-']"/></dd><br/>
                                 <dt></dt>
                                 <dd><g:submitButton name="share" class="btn btn-primary btn-sm"/></dd>
                             </dl>
                         </g:form>
                     </div>
+
                     <div class="tab-pane fade" id="docRes">
                         <g:uploadForm controller="documentResource" action="createDocRes" name="myUpload">
                             <br/>
                             <dl class="dl-horizontal">
                                 <dt>Document*</dt>
-                                <dd><input type="file" name="file" /></dd><br/>
+                                <dd><input type="file" name="file"/></dd><br/>
                                 <dt>Description*</dt>
-                                <dd><g:textArea name="description" /></dd><br/>
+                                <dd><g:textArea name="description"/></dd><br/>
                                 <dt>Topic*</dt>
-                                <dd><g:select name="criteria.topic" from="${topicList}" optionKey="id" optionValue="name" noSelection="['':'-Select topic-']"/></dd><br/>
+                                <dd><g:select name="criteria.topic" class="btn-default" from="${topicList}"
+                                              optionKey="id" optionValue="name"
+                                              noSelection="['': '-Select topic-']"/></dd><br/>
                                 <dt></dt>
                                 <dd><g:submitButton name="share" class="btn btn-primary btn-sm"/></dd>
                             </dl>
                         </g:uploadForm>
                     </div>
                 </div>
-            </div><!-- right div end-->
 
+            </div><!-- right div end-->
+            <div class="row ">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Create topic
+                    </div>
+
+                    <div class="panel-body">
+                        <g:form controller="home" action="createTopic">
+                            <br/>
+                            <dl class="dl-horizontal">
+                                <dt>Name*</dt>
+                                <dd><g:textField name="topicName"/></dd><br/>
+                                <dt>Visibility*</dt>
+                                <dd><g:select name="visibility" class="btn-default"
+                                              from="${com.linkSharing.Topic.Visibility.values()}"/></dd><br/>
+                                <dt></dt>
+                                <dd><g:submitButton name="Save" class="btn btn-primary btn-sm"/></dd>
+                            </dl>
+                        </g:form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

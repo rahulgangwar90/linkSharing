@@ -4,7 +4,7 @@
         <img src="http://dummyimage.com/70x70/000/fff.jpg" alt="Avatar" class="avatar" height="50" width="50"/>
     </a>
     <div class="media-body">
-        <h4 class="media-heading">${name} <small>@${username}  </small></h4>
+        <h5 class="media-heading"><b>${name} </b><small>@${username}  </small></h5>
         <p>${description}</p>
 
 

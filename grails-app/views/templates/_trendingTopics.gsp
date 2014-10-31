@@ -15,7 +15,7 @@
                 <g:textField name="topicNewName" value="${topicOwner.name}"/>
                 <g:hiddenField name="topicId" value="${topicOwner.id}"/>
 
-                <g:submitButton name="submit" class="btn btn-danger btn-xs" value="save"/>
+                <g:submitButton name="submit" class="btn btn-danger btn-xs" value="save"><span class="glyphicon glyphicon-ok-sign"> </span></g:submitButton>
             </g:form>
 
             <div>
@@ -27,8 +27,8 @@
 
             <div class="row">
                 <div class="col-md-8">
-                    <g:select name="visibility" from="${com.linkSharing.Topic.Visibility.values()}"/>
-                    <g:select name="seriousness" from="${com.linkSharing.Subscription.Seriousness.values()}"/>
+                    <g:select name="visibility" class="btn-default" from="${com.linkSharing.Topic.Visibility.values()}"/>
+                    <g:select name="seriousness" class="btn-default" from="${com.linkSharing.Subscription.Seriousness.values()}"/>
                 </div>
 
                 <div class="col-md-4">

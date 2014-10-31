@@ -89,6 +89,7 @@ class ApplicationTagLib {
         def readingList = ReadingItem.createCriteria().list {
 
             eq("user",user)
+            //todo update gorm query for inbox
 
         }
 
@@ -110,7 +111,7 @@ class ApplicationTagLib {
         def name = "\u0024{user.firstname} \u0024{user.lastname} "
         def username = user.username
 
-        def readingListCount = ReadingItem.countByUserAndIsRead(user,false)
+        def readingListCount = ReadingItem.countByUser(user)
 
 
 

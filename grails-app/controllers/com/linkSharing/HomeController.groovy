@@ -25,7 +25,7 @@ class HomeController {
 
         utilService.shareLink(params,session)
 
-        dashboard()
+        redirect(controller: "home",action: "dashboard")
 
     }
 
